@@ -42,12 +42,12 @@ beforeEach(() => {
         cy.title().should('include', 'Getting Started | Telnyx Support')
       })
 
-    xit('id:TEL_005 Checking the ability of the user to send comments to the expert ', () => {
+    it('id:TEL_005 Checking the ability of the user to send comments to the expert ', () => {
        
         cy.contains("Talk to an expert").should('be.visible').click()
         cy.get('[id="Reason_for_Contact__c"]', { timeout: 7000 }).select('Support').should('be.visible')
-        cy.get('[id="FirstName"]').type('First Name')
-        .should('have.value', 'First Name')
+        cy.get('[id="FirstName"]').type('Vitalii')
+        .should('have.value', 'Vitalii')
         cy.get('[id="LastName"]').type('Last Name')
         .should('have.value', 'Last Name')
         cy.get('[id="Email"]').type('Businessemail@telnyx.com')
